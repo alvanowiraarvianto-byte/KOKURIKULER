@@ -1,0 +1,255 @@
+/* ======================================= */
+/* 1. RESET DAN FONT DASAR */
+/* ======================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9; /* Warna latar belakang umum */
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ======================================= */
+/* 2. HEADER DAN NAVIGASI */
+/* ======================================= */
+header {
+    background-color: #005691; /* Biru Laut Madura */
+    color: #fff;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.logo p {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Kuning keemasan */
+    border-bottom: 2px solid #ffcc00;
+}
+
+/* ======================================= */
+/* 3. KONTEN UTAMA (MAIN) */
+/* ======================================= */
+main {
+    padding: 20px 5%;
+}
+
+.content-section {
+    padding: 40px 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+.content-section:last-child {
+    border-bottom: none;
+}
+
+.content-section h3 {
+    font-size: 2em;
+    color: #a80000; /* Merah Marun/Bata Khas Madura */
+    margin-bottom: 15px;
+    border-left: 5px solid #ffcc00;
+    padding-left: 10px;
+}
+
+/* Latar Belakang Sekunder untuk variasi */
+.secondary-bg {
+    background-color: #ebebeb;
+    padding: 40px 5%;
+    margin-left: -5%; /* Mengisi ruang penuh pada padding main */
+    margin-right: -5%;
+}
+
+/* ======================================= */
+/* 4. HERO SECTION (BERANDA) */
+/* ======================================= */
+.hero {
+    background: url('madura-hero-bg.jpg') no-repeat center center/cover; /* Ganti dengan gambar latar belakang Madura */
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #fff;
+    color: #005691;
+}
+
+/* ======================================= */
+/* 5. ELEMEN KHUSUS */
+/* ======================================= */
+
+/* Galeri Batik */
+.galeri-batik {
+    display: flex;
+    gap: 100px;
+    margin-top: 100px;
+}
+
+.galeri-batik .card img {
+    /* Pastikan gambar mengisi lebar container card */
+    width: 90%; 
+    /* Tetapkan tinggi maksimum yang lebih kecil (misalnya 250px) */
+    max-height: 250px; 
+    /* Jaga proporsi gambar dan potong jika perlu agar tidak terdistorsi */
+    object-fit: cover; 
+    border-radius: 5px; /* Tambahkan sedikit radius */
+    margin-bottom: 10px; /* Jarak antara gambar dan teks di bawahnya */
+}
+
+/* Untuk Gambar di Kuliner Khas */
+.galeri-kuliner {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.galeri-kuliner .kuliner-item {
+    /* Agar setiap item kuliner memiliki lebar tertentu */
+    flex-basis: 30%; 
+    text-align: center;
+}
+
+.galeri-kuliner .kuliner-item img {
+    width: 100%; 
+    /* Tetapkan tinggi maksimum, misalnya 200px */
+    max-height: 320px; 
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Untuk Gambar di Galeri Visual */
+.foto-galeri {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.foto-galeri .galeri-img {
+    /* Mengatur lebar agar 4 gambar muat per baris (kurang dari 25% karena ada gap) */
+    width: calc(25% - 10px); 
+    /* Tinggi menyesuaikan agar gambar tidak terdistorsi */
+    height: 180px; /* Tetapkan tinggi tetap untuk keseragaman */
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.foto-galeri .galeri-img:hover {
+    transform: scale(1.03);
+}
+
+/* ======================================= */
+/* 6. FOOTER */
+/* ======================================= */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 5%;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #ffcc00;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* ======================================= */
+/* 7. MEDIA QUERIES (RESPONSIVE) */
+/* ======================================= */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .galeri-batik {
+        flex-direction: column;
+    }
+}
